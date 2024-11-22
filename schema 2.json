@@ -1,0 +1,71 @@
+{
+    "collections": [
+        {
+            "name": "SEARCH_PDP_ENTITY",
+            "description": "Collection for PDP Metadata Data",
+            "fields": [
+                {
+                    "name": "id",
+                    "dtype": "INT64",
+                    "other_params": {
+                        "is_primary": true,
+                        "auto_id": false
+                    }
+                },
+                {
+                    "name": "rank",
+                    "dtype": "INT64",
+                    "other_params": {}
+                },
+                {
+                    "name": "platform",
+                    "dtype": "VARCHAR",
+                    "other_params": {
+                        "max_length": 100
+                    }
+                },
+                {
+                    "name": "country",
+                    "dtype": "VARCHAR",
+                    "other_params": {
+                        "max_length": 100
+                    }
+                },
+                {
+                    "name": "in_category",
+                    "dtype": "VARCHAR",
+                    "other_params": {
+                        "max_length": 100
+                    }
+                },
+                {
+                    "name": "search_keyword",
+                    "dtype": "VARCHAR",
+                    "other_params": {
+                        "max_length": 100
+                    }
+                },
+                {
+                    "name": "in_subcategory",
+                    "dtype": "VARCHAR",
+                    "other_params": {
+                        "max_length": 100
+                    }
+                },
+                {
+                    "name": "vector",
+                    "dtype": "FLOAT_VECTOR",
+                    "property_name": ["title", "description", "bullets_data"],
+                    "other_params": {
+                        "dim": 384
+                    }
+                },
+                {
+                    "name": "metadata",
+                    "dtype": "JSON",
+                    "property_name": [ "id", "title", "description", "bullets_data", "brand"]
+                }
+            ]
+        }
+    ]
+}
